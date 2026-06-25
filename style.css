@@ -14,30 +14,30 @@ body {
   position: relative;
 }
 
-/* --- [เพิ่ม] เอฟเฟกต์ก้อนเมฆและดวงดาวกระจายทั่วพื้นหลังเว็บ --- */
+/* --- เพิ่มดวงดาวกระจายวิบวับหนาแน่นทั่วทั้งพื้นหลังเว็บ --- */
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   z-index: -1;
   pointer-events: none;
-  /* สร้างจุดประกายดวงดาวระยิบระยับ และเมฆจางๆ บนพื้นหลัง */
   background-image: 
-    radial-gradient(circle at 15% 25%, #FFF 3px, transparent 3px),
-    radial-gradient(circle at 85% 15%, #FFDF00 4px, transparent 4px),
-    radial-gradient(circle at 70% 75%, #FFF 2px, transparent 2px),
-    radial-gradient(circle at 30% 80%, #FFDF00 5px, transparent 5px),
-    radial-gradient(circle at 50% 40%, rgba(255,255,255,0.6) 20px, transparent 30px);
+    radial-gradient(circle at 10% 15%, #FFF 4px, transparent 4px),
+    radial-gradient(circle at 85% 10%, #FFDF00 5px, transparent 5px),
+    radial-gradient(circle at 75% 85%, #FFF 3px, transparent 3px),
+    radial-gradient(circle at 20% 70%, #FFDF00 6px, transparent 6px),
+    radial-gradient(circle at 50% 15%, #FFF 3px, transparent 3px),
+    radial-gradient(circle at 90% 60%, #FFDF00 4px, transparent 4px),
+    radial-gradient(circle at 35% 45%, #FFF 5px, transparent 5px),
+    radial-gradient(circle at 65% 35%, #FFDF00 4px, transparent 4px);
 }
 
 header {
-  /* สีเหลืองสดใสจากลูกบอล Luxo Ball */
   background: #FFDF00; 
   color: #0056B3; 
-  padding: 60px 20px;
+  padding: 65px 20px;
   text-align: center;
   position: relative;
-  /* ขอบหยักสีแดงสไตล์กรอบของเล่น */
   border-bottom: 8px solid #E63946; 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -47,146 +47,20 @@ header h1 {
   margin: 0;
   font-size: 3.5rem;
   font-weight: 700;
-  /* เงาอักษร 3 มิติสีแดง-น้ำเงิน สไตล์โลโก้ Toy Story */
   text-shadow: 3px 3px 0px #E63946, 5px 5px 0px #0056B3; 
   letter-spacing: 2px;
 }
 
+/* --- [ปรับปรุง] ส่วนชื่อภาษาอังกฤษให้เด่นเด้ง Pop-up ไฮโซเวอร์ๆ --- */
 header p {
-  margin: 15px 0 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.8);
-  display: inline-block;
-  padding: 5px 20px;
-  border-radius: 50px;
-  color: #E63946;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-/* --- ก้อนเมฆน่ารักๆ แบบสมจริงใน Header --- */
-header::before, header::after {
-  content: "";
-  position: absolute;
-  background: #FFFFFF;
-  border-radius: 100px;
-}
-/* ก้อนเมฆใหญ่ฝั่งซ้าย */
-header::before {
-  width: 150px; height: 50px;
-  bottom: 15px; left: 5%;
-  box-shadow: 40px -20px 0 10px #FFF, 90px -10px 0 -5px #FFF, 30px 10px 10px rgba(0,0,0,0.05);
-}
-/* ก้อนเมฆฝั่งขวา */
-header::after {
-  width: 120px; height: 40px;
-  top: 15px; right: 5%;
-  box-shadow: 30px -15px 0 8px #FFF, 70px -5px 0 -3px #FFF, 20px 10px 10px rgba(0,0,0,0.05);
-}
-
-section {
-  padding: 40px;
-  margin: 50px auto;
-  max-width: 800px;
-  background: #FFFFFF;
-  /* เพิ่มความโค้งมนแบบมนสุดๆ เหมือนของเล่นเด็ก */
-  border-radius: 30px; 
-  /* ขอบสีแดงหนาสะใจตัวหนาๆ */
-  border: 6px solid #E63946; 
-  /* เงากล่องแบบคมชัดสไตล์การ์ตูน */
-  box-shadow: 0 15px 0px rgba(0, 56, 179, 0.2), 0 20px 30px rgba(0,0,0,0.1);
-  position: relative;
-}
-
-/* --- [เพิ่ม] ตกแต่งดาวกรอบทองวิบวับโผล่เหนุมุมกล่องข้อความ --- */
-section::before {
-  content: "⭐";
-  position: absolute;
-  top: -25px;
-  right: 30px;
-  font-size: 2.5rem;
-  text-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  animation: bounce 2s infinite ease-in-out;
-}
-
-h2 {
-  /* สีแดงแรงฤทธิ์จากดาวบนลูกบอล */
-  color: #E63946; 
-  font-size: 2.2rem;
-  font-weight: 700;
-  border-bottom: 4px dashed #FFDF00; 
-  padding-bottom: 15px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.project {
-  margin-bottom: 30px;
-  padding: 25px;
-  border-radius: 20px;
-  background-color: #F0F8FF; 
-  /* ขอบหนาสามมิติสีน้ำเงินตัดกับตัวกล่อง */
-  border: 3px solid #0056B3;
-  border-bottom: 8px solid #0056B3;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* เวลาเอาเมาส์มาชี้ กล่องจะเด้งดึ๋งเหมือนสปริงของเล่น */
-.project:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 56, 179, 0.15);
-}
-
-.project h3 {
-  margin: 0 0 15px;
-  color: #0056B3; 
+  margin: 20px 0 0;
   font-size: 1.6rem;
-  font-weight: 600;
-}
-
-ul {
-  list-style-type: none; 
-  padding-left: 5px;
-}
-
-/* เปลี่ยนจุดข้อความธรรมดาให้กลายเป็น บล็อกไม้ลูกบาศก์สามมิติสลับสี! */
-ul li {
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-}
-
-ul li::before {
-  content: "■"; 
-  position: absolute;
-  left: 0;
-  top: -2px;
-  color: #2A9D8F; /* สีเขียวบล็อกไม้ */
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 0px #FFDF00; /* เงาสีเหลืองซ้อนหลังให้ดูเป็นบล็อกหนา */
-}
-
-/* สลับสีบล็อกไม้ตัวถัดไปให้เป็นสีส้มเพื่อความแซ่บ */
-ul li:nth-child(even)::before {
-  color: #E63946;
-  text-shadow: 2px 2px 0px #0056B3;
-}
-
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: #0056B3; 
-  color: #FFFFFF;
-  margin-top: 80px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-top: 6px solid #FFDF00;
-  letter-spacing: 1px;
-}
-
-/* แอนิเมชันให้ดาวดึ๋งๆ เคลื่อนไหวได้ */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(15deg); }
-}
+  font-weight: 700;
+  color: #FFFFFF; /* เปลี่ยนเป็นสีขาวล้วนให้สว่างวาบ */
+  display: inline-block;
+  padding: 8px 30px;
+  background: #E63946; /* ตัดขอบหลังด้วยกล่องสีแดงของเล่น */
+  border: 4px solid #0056B3; /* ขอบน้ำเงินหนาๆ */
+  border-radius: 15px;
+  /* เอฟเฟกต์เงาหนา 3 มิติเฉลียงลงล่าง ทำให้ดู Pop-up เด้งออกมา */
+  box-shadow: 5px 5px 0px #002D62, 0 8px 15px rgba(0,0,0,0.
