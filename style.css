@@ -3,80 +3,48 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #FEF5EC; /* ใช้สีครีมอ่อนละมุนเป็นพื้นหลังหลัก */
-  color: #4A3E3D; /* ปรับสีตัวอักษรให้ออกน้ำตาลเข้มซอฟต์ๆ เข้ากับโทนสี */
+  /* ใช้สีฟ้าพาสเทลเลียนแบบท้องฟ้าในห้องของ Andy */
+  background-color: #87CEEB; 
+  /* ไล่เฉดสีให้ดูมีมิติเหมือนท้องฟ้าด้านบนจะเข้มกว่าด้านล่าง */
+  background-image: linear-gradient(to bottom, #7EC0EE, #A0DBF5);
+  background-attachment: fixed;
+  color: #333333;
 }
 
 header {
-  background: #FBB6EC; /* ใช้สีชมพูสดใสเด่นชัดสำหรับ Header */
-  color: #FFFFFF; /* ปรับอักษรขาวให้ตัดกับพื้นหลังชมพู อ่านง่าย */
-  padding: 30px 0; /* แก้ไขสะกดผิด paddding -> padding */
+  /* ใช้สีเหลืองสดใสจากลูกบอล Luxo Ball */
+  background: #FFDF00; 
+  /* ตัวอักษรสีน้ำเงินเข้ม ตัดกับสีเหลืองอย่างชัดเจนและอ่านง่าย */
+  color: #0056B3; 
+  padding: 40px 0;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 2.8rem;
+  /* เพิ่มเงาอักษรสีแดงให้มีกลิ่นอายฟอนต์ Toy Story */
+  text-shadow: 2px 2px 0px #E63946; 
 }
 
 header p {
   margin: 8px 0 0;
-  font-size: 1.1rem;
-  opacity: 0.9;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-section {
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 800px;
-  background: #FFFFFF; /* พื้นหลังคอนเทนต์ใช้สีขาวเพื่อให้ดูสะอาดตา */
-  border-radius: 12px; /* เพิ่มความโค้งมนให้ดูโมเดิร์นและนุ่มนวลขึ้น */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* แก้ไขสะกดผิด rgbe -> rgba */
-  border: 1px solid #FDECDF; /* เพิ่มขอบสีครีมบางๆ เพิ่มมิติ */
+/* --- ลูกเล่นก้อนเมฆ CSS ตกแต่งใน Header --- */
+header::before, header::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
 }
-
-h2 {
-  color: #FBB6EC; /* ใช้สีชมพูเป็นจุดดึงสายตาสำหรับหัวข้อหลัก */
-  border-bottom: 2px solid #FDECDF; /* เพิ่มเส้นใต้หัวข้อด้วยสีครีมเข้ม */
-  padding-bottom: 8px;
-  margin-top: 0;
-}
-
-.project {
-  margin-bottom: 25px;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #FEF5EC; /* ใช้สีครีมอ่อนแยกสัดส่วนกล่องโปรเจกต์ */
-  transition: transform 0.2s ease;
-}
-
-/* เพิ่มลูกเล่นเมื่อเอาเมาส์ไปชี้ที่กล่องโปรเจกต์ */
-.project:hover {
-  transform: translateY(-3px);
-}
-
-.project h3 {
-  margin: 0 0 10px;
-  color: #4A3E3D;
-}
-
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-/* ปรับสีของ bullet point ให้เข้ากับธีม */
-li::marker {
-  color: #FBB6EC;
-}
-
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background: #FDECDF; /* ใช้สีครีมเข้มสำหรับ Footer ปิดท้ายด้านล่าง */
-  color: #4A3E3D;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
+/* ก้อนเมฆฝั่งซ้าย */
+header::before {
+  width: 100px; height: 40px;
+  bottom: 10px; left: 10%;
+  box-shadow: 30px -10px 0 10px rgba(255, 25
